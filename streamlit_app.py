@@ -37,6 +37,7 @@ if my_file is not None:
   col1, col2 = st.columns(2)
   gemini_file = upload_to_gemini(my_file, 'image/jpeg')
   response = model.generate_content([gemini_file, "Roast this Roast!"])
+  st.snow()
   with col2:
     st.write(response.text)
   with col1:
